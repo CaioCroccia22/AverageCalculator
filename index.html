@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -15,9 +16,9 @@
             <img src="img/logo.png" alt="capelo e diploma">
             <h1>Calculadora de imagens</h1>
         </header>
-        <form action="">
-            <input type="text" required placeholder="Nome da atividade" />
-            <input type="number" required placeholder="Nota de atividade" min="0" max="10" />
+        <form id="form-activity">
+            <input id="activity-name"   type="text" required placeholder="Nome da atividade" />
+            <input id="activity-grade" type="number" required placeholder="Nota de atividade" min="0" max="10" />
             <button type="submit">Adicionar +</button>
         </form>
         <table cellspacing = "0">
