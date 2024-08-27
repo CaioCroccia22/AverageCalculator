@@ -4,6 +4,8 @@ const imgAprovado = '<img src="img/aprovado.png" alt="Emoji celebrando" />';
 const imgReprovado = '<img src="img/reprovado.png" alt="Emoji triste" />';
 const activitys = [];
 const grades = [];
+const spanAprovado = '<span class="aprovado">Aprovado</span>';
+const spanReprovado = '<span class="reprovado">Reprovado</span>';
 
 
 formActivity.addEventListener('submit', function(e){
@@ -45,7 +47,7 @@ function updateAverage(){
     const averageResult = document.getElementById('result-average');
 
     averageValue.innerHTML = average
-    averageResult.innerHTML = average >= 7 ? 'Aprovado' : 'Reprovado';  
+    averageResult.innerHTML = average >= 7 ? spanAprovado : spanReprovado ;  
     console.log(average);
     
 }
