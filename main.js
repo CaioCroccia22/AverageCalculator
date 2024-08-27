@@ -6,7 +6,7 @@ const activitys = [];
 const grades = [];
 const spanAprovado = '<span class="aprovado">Aprovado</span>';
 const spanReprovado = '<span class="reprovado">Reprovado</span>';
-const minimumGrade = parseFloat(prompt('Digite a nota minima: '))
+const minimumGrade = parseFloat(prompt('Digite a nota minima: '));
 
 
 formActivity.addEventListener('submit', function(e){
@@ -21,7 +21,7 @@ function addLine(){
     const inputActivitygrade = document.getElementById('activity-grade');
 
     if (activitys.includes(inputActivityname.value)){
-        alert(`A atividade ${inputActivityname.value} já foi inserida`)
+        alert(`A atividade ${inputActivityname.value} já foi inserida`);
     }else{
 
     activitys.push(inputActivityname.value);
@@ -51,7 +51,7 @@ function updateAverage(){
     const averageValue = document.getElementById('value-average');
     const averageResult = document.getElementById('result-average');
 
-    averageValue.innerHTML = average
+    averageValue.innerHTML = average.toFixed(2);
     averageResult.innerHTML = average >= 7 ? spanAprovado : spanReprovado ;  
     console.log(average);
     
