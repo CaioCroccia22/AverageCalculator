@@ -39,14 +39,22 @@ function updateTable(){
 }
 
 function updateAverage(){
+    const average = getAverage();
 
+    const averageValue = document.getElementById('value-average');
+    const averageResult = document.getElementById('result-average');
+
+    averageValue.innerHTML = average
+    averageResult.innerHTML = average >= 7 ? 'Aprovado' : 'Reprovado';  
+    console.log(average);
+    
+}
+
+function getAverage(){
     let soma = 0;
     for (i = 0; i < grades.length; i++){
         soma += grades[i];
     }
 
-    const average = soma / grades.length;
-    console.log(soma);
-    console.log(average)
-    
+    return soma / grades.length;
 }
