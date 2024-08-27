@@ -6,6 +6,7 @@ const activitys = [];
 const grades = [];
 const spanAprovado = '<span class="aprovado">Aprovado</span>';
 const spanReprovado = '<span class="reprovado">Reprovado</span>';
+const minimumGrade = parseFloat(prompt('Digite a nota minima: '))
 
 
 formActivity.addEventListener('submit', function(e){
@@ -19,6 +20,10 @@ function addLine(){
     const inputActivityname = document.getElementById('activity-name');
     const inputActivitygrade = document.getElementById('activity-grade');
 
+    if (activitys.includes(inputActivityname.value)){
+        alert(`A atividade ${inputActivityname.value} já foi inserida`)
+    }else{
+
     activitys.push(inputActivityname.value);
     grades.push(parseFloat(inputActivitygrade.value));
 
@@ -30,7 +35,7 @@ function addLine(){
     linha += '</tr>';
 
     linhas += linha;
-   
+    }
     inputActivityname.value = '';
     inputActivitygrade.value = '';
 }
